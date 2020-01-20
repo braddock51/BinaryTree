@@ -84,31 +84,18 @@ namespace BinaryTree
         public int Pop()
         {
             
-                
-            
             var parent = this.FindTheParent(this.length - 1);
-
             var child = (this.length - 1) % 2 == 1 ? parent.left : parent.right;
 
-            if (child == null)
-            {
-                var rootdata = this.root.data;
-                this.root = null;
+            var data = child.data;
 
-                return rootdata;
-            }
-
-            var tempData = child.data;
             child = null;
-            
-            this.length--;
 
-            
-            
-            
-            return tempData;
-           
+            return data;
+
         }
+
+
 
 
 
