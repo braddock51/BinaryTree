@@ -86,10 +86,26 @@ namespace BinaryTree
             
             var parent = this.FindTheParent(this.length - 1);
             var child = (this.length - 1) % 2 == 1 ? parent.left : parent.right;
+            int data;
+            if (child == parent.right)
+            {
+                data = child.data;
+                parent.right = null;
+                
+                
 
-            var data = child.data;
+            }
+            else
+            {
+                data = child.data;
+                parent.left = null;
+                
+            }
 
-            child = null;
+            this.length--;
+
+
+
 
             return data;
 
@@ -119,7 +135,7 @@ namespace BinaryTree
                 {
                     if (parent.right.data > child.data)
                     {
-                        child = parent.right;//wskaznik
+                        child = parent.right;
                     }
 
                 }
