@@ -175,11 +175,18 @@ namespace BinaryTree
 
         private int PopFromHeap()
         {
-            var data = this.root.data;
-            this.root.data = this.Pop();
-            this.ValidateHeapDown();
+            if (this.length > 1)
+            {
+                var data = this.root.data;
+                this.root.data = this.Pop();
+                this.ValidateHeapDown();
 
-            return data;
+                return data;
+            }
+            else
+            {
+                return this.root.data;
+            }
 
         }
         
@@ -199,15 +206,18 @@ namespace BinaryTree
 
         public static void HeapSort(int[] array, Tree tree)
         {
-            
+            int[] tempArray = new int[array.Length];
 
-            for (int i = array.Length -1; i >= 0; i--)
+            for (int i = array.Length-1; i >= 0; i--)
             {
-                array[i] = tree.PopFromHeap();
+                tempArray[i] = tree.PopFromHeap();
 
             }
-                
 
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = tempArray[i];
+            }
             
         }
 

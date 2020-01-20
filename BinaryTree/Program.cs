@@ -7,7 +7,7 @@ namespace BinaryTree
     {
         static void Main()
         {
-            int[] array = new int[6] {10, 1, 9, 2, 8, -1};
+            int[] array = new int[10] {9, 8, 7, -6, 5, -4, 3, 2, -1, -50};
             
             foreach (var item in array)
             {
