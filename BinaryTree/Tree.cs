@@ -23,14 +23,7 @@ namespace BinaryTree
             this.depth = 0;
         }
 
-        private bool IsEmpty()
-        {
-            if (this.root == null)
-                return true;
-            else
-                return false;
-        }
-            
+        
 
         private Node FindTheParent(int number)
         {
@@ -160,8 +153,7 @@ namespace BinaryTree
 
         private void ValidateHeapUp(Node n)
         {
-            //1. jest rodzic albo go nie ma
-            //2. porownanie dziecka z rodzicem
+            
 
             while (n.parent != null)
             {

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System
 
 
 namespace BinaryTree
@@ -13,7 +13,7 @@ namespace BinaryTree
             
             for (int i = 0; i < array.Length; i++)
             {
-                var los = rnd.Next(-500, 500);
+                var los = rnd.Next(-10, 10);
                 array[i] = los;
             }
 
